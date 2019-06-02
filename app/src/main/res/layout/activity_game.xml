@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity"
+    android:orientation="vertical"
+    android:background="@color/background"
+
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:padding="10dp"
+    android:background="@drawable/top_tool_bar"
+
+    >
+    <TextView
+        android:id="@+id/hud_layout_money_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Money:"
+        android:layout_centerVertical="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+
+        />
+
+
+    <TextView
+        android:id="@+id/hud_layout_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/hud_layout_money_title"
+        android:textSize="24sp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+
+        />
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/monopolyicon"
+        android:layout_centerHorizontal="true"
+        />
+    <TextView
+        android:id="@+id/hud_layout_turn_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Turn:"
+        android:layout_centerVertical="true"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_toLeftOf="@+id/hud_layout_turn"
+
+        />
+
+    <TextView
+        android:id="@+id/hud_layout_turn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player"
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentRight="true"
+        android:textSize="24sp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/white"
+        />
+</RelativeLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/game_board_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:scrollbarStyle="outsideInset"
+        android:scrollbars="horizontal"
+        >
+    </android.support.v7.widget.RecyclerView>
+
+
+</ScrollView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        >
+        <LinearLayout
+            android:id="@+id/cubes_linar_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            >
+            <ImageView
+                android:id="@+id/left_cube"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/six"
+                />
+            <ImageView
+                android:id="@+id/right_cube"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/six"
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/util_buttons_framelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cubes_linar_layout"
+            android:layout_gravity="center_horizontal"
+
+            >
+            <Button
+                android:id="@+id/roll_dice_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roll dice"
+                android:onClick="onRollDiceClicked"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible"
+                />
+
+            <Button
+                android:id="@+id/end_turn_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="End turn"
+                android:onClick="onEndTurnClicked"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible"
+                />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/losing_ui_layout"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="You Lost"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Exit"
+            android:onClick="onExitClicked"
+            />
+
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/win_ui_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="You Win"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Exit"
+                android:onClick="onExitClicked"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/wait_ui_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            >
+
+            <TextView
+                android:id="@+id/player_playing_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Player is playing"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                style="?android:attr/progressBarStyle"
+                />
+
+
+        </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/gif_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:visibility="invisible"
+                android:foregroundGravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                />
+
+
+    </FrameLayout>
+        </FrameLayout>
+
+
+
+        <FrameLayout
+            android:id="@+id/buy_pay_buttons_framelayout"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            >
+            <Button
+                android:id="@+id/buy_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buy"
+                android:onClick="onBuyClicked"
+                android:visibility="invisible"
+                />
+
+        </FrameLayout>
+
+    </LinearLayout>
+</FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/city_layout"
+    android:background="@color/background"
+    >
+    <RelativeLayout
+        android:id="@+id/city_layout_color_control"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/city_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Default city name"
+            android:layout_centerHorizontal="true"
+            android:textSize="17sp"
+            android:paddingTop="5dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/light_black"
+            android:textStyle="bold"
+            />
+<RelativeLayout
+    android:id="@+id/city_relativelayout_owner_holder"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/city_name_textview"
+    android:layout_centerHorizontal="true"
+    >
+
+    <TextView
+        android:id="@+id/city_owner_title_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text="Owner:"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+
+        />
+    <TextView
+        android:id="@+id/city_owner_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:textSize="15sp"
+        android:text=""
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/city_owner_title_textview"
+        />
+</RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/city_relativelayout_price_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/city_relativelayout_owner_holder"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+
+            >
+            <TextView
+                android:id="@+id/city_price_title_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="15sp"
+                android:text="Price:"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+
+                />
+            <TextView
+                android:id="@+id/city_price_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="15sp"
+                android:text=""
+                android:lines="1"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/city_price_title_textview"
+
+                />
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:foregroundGravity="center"
+        android:layout_centerInParent="true"
+        >
+        <GridLayout
+            android:id="@+id/city_player_list_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            >
+
+        </GridLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SignInActivity"
+    >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:textSize="40sp"
+        android:layout_margin="20dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/signin_port_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter port"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            />
+
+        <EditText
+            android:id="@+id/signin_screen_port_textbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="example: 8084"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter ip address"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="50dp"
+
+        />
+
+    <EditText
+        android:id="@+id/signin_screen_ip_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="example: 192.168.20.1"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:maxWidth="190dp"
+        android:maxHeight="50dp"
+        />
+
+</RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your Email address"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/signin_screen_email_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="example: johndoe@gmail.com"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter a user name address"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/signin_screen_username_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="example: johndoe"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose an avatar"
+        android:textSize="20sp"
+        android:layout_marginTop="5dp"
+
+        android:layout_gravity="center_horizontal"/>
+
+    <Spinner
+        android:id="@+id/signin_screen_avatar_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        ></Spinner>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_gravity="center_horizontal"
+        android:textAllCaps="false"
+        android:layout_marginTop="5dp"
+        android:onClick="onSaveClicked"
+        />
+
+
+</LinearLayout>

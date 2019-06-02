@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Monopoly</string>
+    <string name="title_activity_waiting_for_players">WaitingForPlayersActivity</string>
+</resources>

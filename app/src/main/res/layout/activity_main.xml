@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    android:layout_gravity="center_horizontal">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your Email address"
+        android:layout_gravity="center_horizontal"/>
+
+    <EditText
+        android:id="@+id/login_screen_email_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="example: johndoe@gmail.com"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter your smart space"
+        android:layout_gravity="center_horizontal"/>
+    <EditText
+        android:id="@+id/login_screen_smartspace_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="example: 2019b.smartspace"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"/>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+   >
+
+    <TextView
+        android:id="@+id/login_screen_port_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="50dp"
+        android:text="Enter port"
+        />
+
+    <EditText
+        android:id="@+id/login_screen_port_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="example: 8084"
+        android:layout_marginLeft="30dp"
+        android:gravity="center"
+        android:layout_below="@id/login_screen_port_title"/>
+
+    <TextView
+        android:id="@+id/login_screen_ip_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter IP"
+        android:layout_marginRight="70dp"
+        android:layout_alignParentRight="true"
+     />
+
+    <EditText
+        android:id="@+id/login_screen_ip_textbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="example: 5.28.162.84"
+        android:gravity="center"
+        android:layout_below="@id/login_screen_ip_title"
+        android:layout_alignParentRight="true"
+        android:maxWidth="180dp"
+        android:maxHeight="50dp"
+        />
+
+
+</RelativeLayout>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    >
+
+    <Button
+        android:id="@+id/login_screen_loginbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:onClick="onClickLogIn"/>
+
+    <Button
+        android:id="@+id/login_screen_sign_in_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign in"
+        android:textAllCaps="false"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/login_screen_loginbutton"
+        android:onClick="onClickSignIn"
+        />
+    <ProgressBar
+        android:id="@+id/login_screen_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        style="?android:attr/progressBarStyle"
+        android:visibility="invisible"
+        android:layout_toRightOf="@+id/login_screen_loginbutton"
+
+        />
+
+    <ImageView
+        android:id="@+id/login_screen_funnygif_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_toRightOf="@+id/login_screen_progressbar"
+        />
+
+
+</RelativeLayout>
+
+
+</LinearLayout>

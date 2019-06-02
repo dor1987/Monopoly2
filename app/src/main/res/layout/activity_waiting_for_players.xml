@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WaitingForPlayersActivity"
+    android:gravity="top"
+    android:background="@color/white"
+    >
+
+    <ImageView
+        android:id="@+id/waiting_activity_top_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:scaleType="fitXY"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        />
+    <TextView
+        android:id="@+id/waiting_activity_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hi player"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        android:layout_below="@+id/waiting_activity_top_image"
+        android:layout_marginTop="100dp"
+        />
+    <TextView
+        android:id="@+id/waiting_activity_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Waiting for more players"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        android:layout_below="@+id/waiting_activity_name"
+        android:layout_marginTop="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/waiting_activity_bottom_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_below="@+id/waiting_activity_text"
+        android:layout_marginTop="10dp"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_below="@+id/waiting_activity_bottom_image"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickCancel"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/city_popup_relativelayout"
+    android:background="@android:color/transparent"
+    >
+
+    <RelativeLayout
+        android:id="@+id/city_popup_layout_color_control"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/city_popup_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Default city name"
+            android:layout_centerHorizontal="true"
+            android:textSize="35sp"
+            android:paddingTop="15dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+        <RelativeLayout
+            android:id="@+id/city_popup_relativelayout_owner_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/city_popup_name_textview"
+            >
+
+            <TextView
+                android:id="@+id/city_popup_owner_title_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="30sp"
+                android:paddingTop="20dp"
+                android:text="Owner:"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+
+                />
+            <TextView
+                android:id="@+id/city_popup_owner_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:paddingTop="20dp"
+                android:textSize="30sp"
+                android:text=""
+                android:textStyle="bold"
+                android:gravity="center"
+                android:paddingRight="5dp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@+id/city_popup_owner_title_textview"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/city_popup_relativelayout_price_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_below="@+id/city_relativelayout_owner_holder"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="bottom"
+            android:paddingBottom="15dp"
+            >
+
+            <TextView
+                android:id="@+id/city_popup_price_title_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="30sp"
+                android:text="Price:"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+
+                />
+            <TextView
+                android:id="@+id/city_popup_price_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="30sp"
+                android:text=""
+                android:lines="1"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/city_popup_price_title_textview"
+                />
+            <TextView
+                android:id="@+id/city_popup_fine_title_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="30sp"
+                android:text="Fine:"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_above="@+id/city_popup_price_title_textview"
+
+                />
+            <TextView
+                android:id="@+id/city_popup_fine_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="30sp"
+                android:text=""
+                android:lines="1"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/city_popup_fine_title_textview"
+                android:layout_above="@+id/city_popup_price_textview"
+
+                />
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:foregroundGravity="center"
+        android:layout_centerInParent="true"
+        >
+        <GridLayout
+            android:id="@+id/city_popup_player_list_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            >
+
+        </GridLayout>
+
+
+    </FrameLayout>
+
+</RelativeLayout>
